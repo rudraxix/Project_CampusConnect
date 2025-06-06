@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Student Community Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span>Campus</span>Connect
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><button class="login-btn" onclick="toggleModal()">Login</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Connect. Collaborate. Create.</h1>
+                <p>Join your college community to showcase projects, attend events, and connect with fellow students.</p>
+                <button class="cta-button" onclick="toggleModal()">Join Now</button>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #4F46E5;"></div>
+                    <div class="project-content">
+                        <h3>Smart Campus App</h3>
+                        <p>A mobile application for seamless campus navigation and information access.</p>
+                        <div class="team-info">
+                            <span>Team: 4 members</span>
+                            <button class="join-btn">Join Team</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #0EA5E9;"></div>
+                    <div class="project-content">
+                        <h3>E-Library System</h3>
+                        <p>Digital library management system with advanced search and recommendations.</p>
+                        <div class="team-info">
+                            <span>Team: 3 members</span>
+                            <button class="join-btn">Join Team</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #8B5CF6;"></div>
+                    <div class="project-content">
+                        <h3>Campus Events Portal</h3>
+                        <p>Centralized platform for managing and discovering campus events.</p>
+                        <div class="team-info">
+                            <span>Team: 5 members</span>
+                            <button class="join-btn">Join Team</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">FEB</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Tech Hackathon 2024</h3>
+                        <p class="event-location">📍 Main Auditorium</p>
+                        <p class="event-time">⏰ 9:00 AM - 6:00 PM</p>
+                        <button class="rsvp-btn">RSVP Now</button>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">20</span>
+                        <span class="month">FEB</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Career Fair Spring 2024</h3>
+                        <p class="event-location">📍 Student Center</p>
+                        <p class="event-time">⏰ 10:00 AM - 4:00 PM</p>
+                        <button class="rsvp-btn">RSVP Now</button>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">25</span>
+                        <span class="month">FEB</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Web Development Workshop</h3>
+                        <p class="event-location">📍 Lab 101</p>
+                        <p class="event-time">⏰ 2:00 PM - 5:00 PM</p>
+                        <button class="rsvp-btn">RSVP Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleModal()">&times;</span>
+            <h2>Welcome Back!</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <button type="button" class="google-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                    Continue with Google
+                </button>
+                <p class="form-footer">Don't have an account? <a href="#">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CampusConnect</h3>
+                <p>Connecting students, fostering collaboration, and building a stronger campus community.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CampusConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
