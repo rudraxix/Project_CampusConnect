@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -30,3 +31,6 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server started on port ${PORT}`);
 });
+=======
+
+>>>>>>> 78c33d47e4cd43f29f4969081812500b84e6caeb
